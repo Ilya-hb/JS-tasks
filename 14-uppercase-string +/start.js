@@ -12,3 +12,12 @@
  *
  * 5. Выведите в консоль значение второй переменной
  */
+
+const str = "lorem ipsum";
+const strs = new String("LoremIpsum");
+console.log(str instanceof String);
+console.log(typeof str);
+console.log(strs instanceof String);
+
+const anotherStr = str.toUpperCase();
+console.log(anotherStr);

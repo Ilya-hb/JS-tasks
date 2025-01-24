@@ -4,3 +4,7 @@
  *
  * 2. Выведите значение в консоль
  */
+
+let now = new Date();
+now = now.getTime();
+console.log(now);

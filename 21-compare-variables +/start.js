@@ -6,12 +6,17 @@
  * 2. Преобразуйте обе переменные в числа перед сравнением.
  */
 
-let myVariable1 = 10
-let myVariable2 = '5'
+let myVariable1 = 10;
+let myVariable2 = "5";
+
+myVariable2 = parseInt(myVariable2);
+console.log(typeof myVariable2);
+
+console.log(myVariable1 >= myVariable2);
 
 // Напишите код здесь
-
-myVariable1 = '20'
-myVariable2 = 100
-
+myVariable1 = "20";
+myVariable2 = 100;
+myVariable1 = parseInt(myVariable1);
+console.log(myVariable1 <= myVariable2);
 // Напишите код здесь

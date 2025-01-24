@@ -4,3 +4,6 @@
  *
  * 2. Виведите в консоль длину этой строки
  */
+
+const str = "lorem ipsum";
+console.log(str.length);
