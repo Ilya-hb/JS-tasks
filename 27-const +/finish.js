@@ -8,16 +8,17 @@
  * Не меняйте строки 13, 18
  */
 
-const arr = [1, 2] // <-- Объявление переменной используя const
+let arr = [1, 2]; // <-- Объявление переменной используя const
 
-arr.push(3)
+arr.push(3);
 
-console.log(arr)
+console.log(arr);
 // [1, 2, 3]
 
-arr = [1, 2, 3, 4]
+arr = [1, 2, 3, 4];
+//cause of const declaration
 // ДО: Uncaught TypeError: Assignment to constant variable.
 // ПОСЛЕ: Нет ошибки
 
-console.log(arr)
+console.log(arr);
 // [1, 2, 3, 4]
