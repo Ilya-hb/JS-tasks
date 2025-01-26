@@ -11,3 +11,12 @@
  *
  * 4. Выведите результирующий массив в консоль
  */
+const array = [
+  { cars: { carBrand: "Toyota", price: 10000, isAvailableForSale: true } },
+  { cars: { carBrand: "BMW", price: 20000, isAvailableForSale: false } },
+  { cars: { carBrand: "Audi", price: 30000, isAvailableForSale: true } },
+];
+array.push({
+  cars: { carBrand: "Mercedes", price: 40000, isAvailableForSale: false },
+});
+console.log(array);
