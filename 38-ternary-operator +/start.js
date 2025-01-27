@@ -9,11 +9,11 @@
 
 function isArrayEmpty(inputArray) {
   if (inputArray.length > 0) {
-    return 'Массив не пустой'
+    return "Массив не пустой";
   } else {
-    return 'Массив пустой'
+    return "Массив пустой";
   }
 }
 
-console.log(isArrayEmpty([1, 3]))
-console.log(isArrayEmpty([]))
+console.log(isArrayEmpty([1, 3]));
+console.log(isArrayEmpty([]));
