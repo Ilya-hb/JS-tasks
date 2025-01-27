@@ -12,3 +12,10 @@
  * "Сообщение номер 4"
  * "Сообщение номер 5"
  */
+
+let i = 1;
+
+const timer = setInterval(() => {
+  console.log(`Сообщение номер ${i++}`);
+  if (i === 6) clearInterval(timer);
+}, 2000);

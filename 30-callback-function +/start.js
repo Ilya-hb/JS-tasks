@@ -9,5 +9,6 @@
 setTimeout(function myFn() {
   console.log("Привет из функции myFn");
 }, 2000);
-
-myFn();
+// myFn is not defined
+//через 2 секунды выведет в консоль "Привет из функции myFn"
+myFn(); // ее нет смысла вызывать, тк она не в scope, а в setTimeout
