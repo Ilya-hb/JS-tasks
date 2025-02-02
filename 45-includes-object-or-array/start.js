@@ -10,9 +10,10 @@
  */
 
 const isElementInArray = (searchElement, inputArray) => {
-  if (typeof searchElement !== "object") {
-    
+  if (typeof searchElement !== "object" && Array.isArray(inputArray)) {
   }
+  inputArray.toString();
+  console.log(inputArray);
 };
 
 const tags = [
