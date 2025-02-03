@@ -12,12 +12,21 @@
 const objectWithNumbers = {
   a: 10,
   b: 20,
-  c: 'string',
+  c: "string",
   d: 12,
-}
-
+};
+const sumObjectValues = (nums) => {
+  let sum = 0;
+  for (el in nums) {
+    // console.log(typeof nums[el]);
+    if (typeof nums[el] === "number") {
+      sum += nums[el];
+    }
+  }
+  return sum;
+};
 // Создайте функцию здесь
 
-const result = sumObjectValues(objectWithNumbers)
-console.log(result)
+const result = sumObjectValues(objectWithNumbers);
+console.log(result);
 //42
