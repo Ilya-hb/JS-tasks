@@ -31,7 +31,7 @@ const photosGallery = (title, dimensions, date) => {
 }
 
 const myDogPhoto = photosGallery('My dog', '1920x1080', new Date())
-
+console.log(photosGallery())
 const testDimension1 = '1920x1080'
 const testDimension2 = '1080x720'
 

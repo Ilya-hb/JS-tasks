@@ -7,13 +7,19 @@
  * Выводы в консоли должны совпадать с теми, которые в конце задачи
  */
 
+function carInfo({ brand, price }) {
+  return price > 20000
+    ? `Цена автомобиля ${brand} - ${price} и это дорогая машина`
+    : `Цена автомобиля ${brand} - ${price} и это дешёвая машина`;
+}
+
 const cars = [
-  { brand: 'Honda', price: 13000 },
-  { brand: 'Rolls-Royce', price: 120000 },
-]
+  { brand: "Honda", price: 13000 },
+  { brand: "Rolls-Royce", price: 120000 },
+];
 
 // Создайте функцию "carInfo" здесь
 
-cars.forEach((car) => console.log(carInfo(car)))
+cars.forEach((car) => console.log(carInfo(car)));
 // Цена автомобиля Honda - 13000$ и это дешёвая машина
 // Цена автомобиля Rolls-Royce - 120000$ и это дорогая машина

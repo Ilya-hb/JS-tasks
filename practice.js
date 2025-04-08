@@ -1,3 +1,12 @@
+function User(name, age) {
+  this.name = name;
+  this.age = age;
+}
 
-const arr = [10, 20, 5, 30, 15];
-console.log(findMax(arr)); // 30
+// Добавь метод в прототип User.prototype
+User.prototype.getFullName = function() {
+  return `Имя: ${this.name}, Возраст: ${this.age}`;
+};
+
+const user = new User("Алексей", 25);
+console.log(user.getFullName()); // "Имя: Алексей, Возраст: 25"

@@ -35,9 +35,13 @@ const inputProducts = [
 ];
 
 function quantitiesByCategories(products) {
-  products.forEach((el) => {
-    Object.values(el).forEach((el2) => console.log(el2));
-  });
+  return products.reduce((acc, product) => {
+    const { quantity, category } = product;
+    acc[category] = (acc[category] || 0) + quantity;
+    /*acc[category] — пытаемся получить значение по ключу (названию категории) || 0 — если значение undefined (т.е. такой категории ещё нет), используем 0*/
+    console.log(acc);
+    return acc;
+  }, {});
 }
 quantitiesByCategories(inputProducts);
 

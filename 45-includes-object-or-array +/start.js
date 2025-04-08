@@ -10,10 +10,12 @@
  */
 
 const isElementInArray = (searchElement, inputArray) => {
-  if (typeof searchElement !== "object" && Array.isArray(inputArray)) {
+  if (typeof searchElement !== "object") {
+    return inputArray.includes(searchElement);
   }
-  inputArray.toString();
-  console.log(inputArray);
+  return inputArray.map((el) =>
+    JSON.stringify(el).includes(JSON.stringify(searchElement))
+  );
 };
 
 const tags = [
