@@ -11,9 +11,14 @@
  */
 
 function shortPerson(person) {
-  const result = {};
+  const {
+    name: n,
+    info: { country: c, age: a },
+    postsQuantity: p = 0,
+  } = person;
 
-}xw
+  return { n, c, a, p };
+}
 
 const person1 = {
   name: "Mike",
