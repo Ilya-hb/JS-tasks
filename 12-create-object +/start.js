@@ -9,3 +9,15 @@
  * "My name is <name> <surname> and my favorite number is <favoriteNumber>"
  */
 
+const ob = {
+  name: "<name>",
+  surname: "<surname>",
+  favoriteNumber: 5,
+  info() {
+    console.log(
+      `My name is ${this.name} ${this.surname} and my favorite number is ${this.favoriteNumber}`
+    );
+  },
+};
+
+ob.info();

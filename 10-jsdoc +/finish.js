@@ -12,3 +12,14 @@
  *
  * 4. Вызовите функцию
  */
+
+/**
+ * Возвращает разницу двух чисел
+ * @param {number} num1 первое число
+ * @param {number} num2 второе число
+ * @returns {number} Разница чисел
+ */
+function foo(num1, num2) {
+  return num1 - num2;
+}
+console.log(foo(1, 2));
