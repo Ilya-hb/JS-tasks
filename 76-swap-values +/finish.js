@@ -10,7 +10,11 @@ let b = 'second'
 console.log(a, b)
 // first second
 
-// Напишите код здесь
+//1
+// [a, b] = [b, a];
+
+//2
+a = [b, b = a][0];
 
 console.log(a, b)
 // second first
