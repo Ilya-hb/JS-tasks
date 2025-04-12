@@ -9,20 +9,20 @@
  */
 
 function sumNumbers() {
-  let sum = 0
+  let sum = 0;
   for (let i = 0; i < arguments.length; i++) {
-    sum += arguments[i]
+    sum += arguments[i];
   }
-  console.log('Sum of all arguments is ', sum)
+  console.log("Sum of all arguments is ", sum);
 
-  return sum
+  return sum;
 }
 
-sumNumbers(1, 3)
+sumNumbers(1, 3);
 // 4
 
-sumNumbers(10, 20, 5)
+sumNumbers(10, 20, 5);
 // 35
 
-sumNumbers(2, 5, 80, 1, 10, 12)
+sumNumbers(2, 5, 80, 1, 10, 12);
 // 110
