@@ -11,9 +11,7 @@ var kidsWithCandies = function (candies, extraCandies) {
     if (kidsWithExtra[i] >= greatest) result.push(true);
     else result.push(false);
   }
-return result
-  console.log(kidsWithExtra);
-  console.log(candies);
+  return result;
 };
 
 console.log(kidsWithCandies([2, 3, 5, 1, 3], 3));
