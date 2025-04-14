@@ -1,17 +1,7 @@
-function createTimer() {
-  const timer = new Date();
-  const current = setTimeout();
-  console.log(timer);
-  return {
-    start() {
-      setTimeout(() => 5000);
-    },
+function reverseWords(str) {
+  const result = str.split(" ").map((el) => el.split("").reverse().join("")).join(" ");
 
-    pause() {
-      clearTimeout();
-    },
-    reset() {
-      this.timer = new Date();
-    },
-  };
+  console.log(result);
 }
+
+reverseWords("The quick brown fox jumps over the lazy dog.");
