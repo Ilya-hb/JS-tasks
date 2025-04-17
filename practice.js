@@ -1,15 +1,26 @@
-const getData = (url) =>
-  new Promise((resolve, reject) =>
-    fetch(url)
-      .then((response) => response.json())
-      .then((json) => resolve(json))
-      .catch((error) => reject(error))
-  );
+// https://jsonplaceholder.typicode.com/todos
 
-console.log(
-  getData("https://jsonplaceholder.typicode.com/todos")
-    .then((data) => console.log(data))
-    .catch((error) => console.log(error))
-);
+// const getData = (url) =>
+//   new Promise((resolve, reject) =>
+//     fetch(url)
+//       .then((data) => data.json())
+//       .then((json) => resolve(json))
+//       .catch((error) => reject(error))
+//   );
 
-// switch to async/await
+// getData("https://jsonplaceholder.typicode.com/todos/1").then((data) =>
+//   console.log(data)
+// );
+
+const getData = async (url) => {
+  const res = await fetch(url);
+  const json = await res.json();
+  return json;
+};
+
+try {
+  const data = await getData("https://jsonplace2holder.typicode.com/todos/1");
+  console.log(data);
+} catch (error) {
+  console.log(error );
+}
