@@ -1,26 +1,26 @@
-// https://jsonplaceholder.typicode.com/todos
+// const urls = [
+//   "https://jsonplaceholder.typicode.com/posts/1",
+//   "https://jsonplaceholder.typicode.com/comments/1",
+// ];
 
-// const getData = (url) =>
-//   new Promise((resolve, reject) =>
-//     fetch(url)
-//       .then((data) => data.json())
-//       .then((json) => resolve(json))
-//       .catch((error) => reject(error))
-//   );
+// async function fetchAll() {
+//   let requests = urls.map((el) => fetch(el));
+//   return Promise.all(requests).then(res=>res.forEach((el)=>));
+// }
 
-// getData("https://jsonplaceholder.typicode.com/todos/1").then((data) =>
-//   console.log(data)
-// );
+// fetchAll().then(([post, comment]) => {
+//   console.log("Пост:", post);
+//   console.log("Комментарий:", comment);
+// });
 
-const getData = async (url) => {
-  const res = await fetch(url);
-  const json = await res.json();
-  return json;
-};
-
-try {
-  const data = await getData("https://jsonplace2holder.typicode.com/todos/1");
-  console.log(data);
-} catch (error) {
-  console.log(error );
+function high(x) {
+  let result = 0;
+  let words = x.split(" ");
+  for (let i = 0; i < words.length; i++) {
+    for (let j = 0; j < words[i].split("").length; j++) {
+      result += words[i].char
+    }
+  }
 }
+
+console.log(high(`man i need a taxi up to ubud`));
