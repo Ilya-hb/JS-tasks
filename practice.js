@@ -1,5 +1,7 @@
-function isIsogram(str) {
-  return new Set(str.toLowerCase()).size === str.length;
-}
+String.prototype.camelCase = function () {
+  return this.split(" ")
+    .map((el) => el && el[0].toUpperCase() + el.slice(1, el.length))
+    .join("");
+};
 
-console.log(isIsogram("MoOose"));
+console.log("camel Case method".camelCase());
