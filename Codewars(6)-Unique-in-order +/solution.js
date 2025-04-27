@@ -1,8 +1,7 @@
 var uniqueInOrder = function (iterable) {
   //your code here - remember iterable can be a string or an array
-  return Array.isArray(iterable)
-    ? iterable.filter((el, index) => el !== iterable[index + 1])
-    : iterable.split("").filter((el, index) => el !== iterable[index + 1]);
+  const arr = Array.isArray(iterable) ? iterable : iterable.split("");
+  return arr.filter((el, index) => el !== arr[index + 1]);
 };
 
 console.log(uniqueInOrder("AAAABBBCCDAABBB"));
