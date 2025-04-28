@@ -1,9 +1,13 @@
-var uniqueInOrder = function (iterable) {
-  //your code here - remember iterable can be a string or an array
-  return Array.isArray(iterable)
-    ? iterable.filter((el, index) => el !== iterable[index + 1])
-    : iterable.split("").filter((el, index) => el !== iterable[index + 1]);
+/**
+ * @param {Object|Array} obj
+ * @return {boolean}
+ */
+var isEmpty = function (obj) {
+  if (Array.isArray(obj)) return !obj.length ? true : false;
+
+  return !Object.entries(obj).length ? true : false;
 };
 
-console.log(uniqueInOrder("AAAABBBCCDAABBB"));
-console.log(uniqueInOrder([1, 2, 2, 3]));
+isEmpty({ x: 5, y: 42 });
+console.log(isEmpty({}));
+isEmpty([null, false, 0]);
