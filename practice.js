@@ -1,17 +1,23 @@
-/**
- * @param {Array} arr
- * @param {number} size
- * @return {Array}
- */
-var chunk = function (arr, size) {
-  if (!arr.length) return [];
-  const result = [];
-  for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size));
+function likes(names) {
+  if (!Array.isArray(names)) return "Invalid input";
+  switch (names.length) {
+    case 0:
+      return "no one likes this";
+    case 1:
+      return `${names[0]} likes this`;
+    case 2:
+      return `${names[0]} and ${names[1]} likes this`;
+    case 3:
+      return `${names[0]}, ${names[1]} and ${names[3]} like this`;
+    default:
+      return `${names[0]}, ${names[1]} and ${names.length - 2} other like this`;
   }
-  return result;
-};
+}
 
-console.log(chunk([1, 2, 3, 4, 5], 1));
-console.log(chunk([8, 5, 3, 2, 6], 6));
-console.log(chunk([1, 9, 6, 3, 2], 3));
+console.log(likes([])); // "no one likes this"
+console.log(likes(["Peter"])); // "Peter likes this"
+console.log(likes(["Jacob", "Alex"])); // "Jacob and Alex like this"
+console.log(likes(["Max", "John", "Mark"])); // "Max, John and Mark like this"
+console.log(likes(["Alex", "Jacob", "Mark", "Max"])); // "Alex, Jacob and 2 others like this"
+console.log(likes(["A", "B", "C", "D", "E"])); // "A, B and 3 others like this"
+console.log(likes("Peter")); // "Invalid input"
