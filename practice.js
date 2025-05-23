@@ -1,21 +1,13 @@
 /**
- * @param {string[]} strs
+ * @param {number[]} nums
  * @return {string}
  */
-var longestCommonPrefix = function (strs) {
-  let prefix = strs[0];
-
-  console.log(strs[0][0]);
-  for (let i = 1; i < strs.length; i++) {
-    let current = strs[i];
-    while (!current.startsWith(prefix)) {
-      prefix = prefix.slice(0, -1);
-
-      if (prefix == "") return "";
-    }
-  }
-  return prefix;
+var triangleType = function(nums) {
+    nums.sort((a,b)=>a-b);
+    if(nums[0]===nums[1] && nums[1] === nums[2])return 'equilateral'
+    if(nums[])
 };
 
-console.log(longestCommonPrefix(["flo2323wer", "flow", "flight"]));
-// console.log(longestCommonPrefix(["dog", "racecar", "car"]));
+console.log(triangleType([3,4,5]))
+console.log(triangleType([3,3,3]))
+console.log(triangleType([]))
