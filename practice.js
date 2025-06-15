@@ -1,13 +1,18 @@
 /**
- * @param {number[]} digits
- * @return {number[]}
+ * @param {number[]} prices
+ * @return {number}
  */
-var plusOne = function (digits) {
-  let strDigits = digits.toString().split(",").join("");
-  const result = (parseInt(strDigits) + 1).toString().split("");
+var maxProfit = function (prices) {
+  let profit = 0;
 
-  return result.map((el) => +el);
+  for (let i = 1; i < prices.length; i++) {
+    if (prices[i] > prices[i - 1]) {
+      profit += prices[i] - prices[i - 1];
+    }
+  }
+
+  console.log(profit);
 };
 
-console.log(plusOne([1, 2, 3]));
-console.log(plusOne([9]));
+maxProfit([7, 1, 5, 3, 6, 4]);
+maxProfit([1, 2, 3, 4, 5]);
