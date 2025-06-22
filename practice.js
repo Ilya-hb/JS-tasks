@@ -1,33 +1,31 @@
 /**
- * @param {number[]} nums
- * @return {number}
+ * @param {string} s
+ * @param {number} k
+ * @param {character} fill
+ * @return {string[]}
  */
-var maximumDifference = function (nums) {
-  // Bad optimization
-  // let result = 0;
-  // let flag = false;
-  // for (let i = 0; i < nums.length; i++) {
-  //   for (let j = i + 1; j < nums.length; j++) {
-  //     console.log(nums[i], nums[j]);
-  //     let diff = nums[j] - nums[i];
-  //     if (diff > result) {
-  //       result = diff;
-  //       flag = true;
-  //     }
-  //   }
-  // }
-  // if (!flag) return -1;
-  // return result;
+var divideString = function (s, k, fill) {
+  const result = [];
+  let temp = "";
 
-  //Improved Solution with 1 loop
-  let min = nums[0];
-  let maxDiff = -1;
-  for (let i = 1; i < nums.length; i++) {
-    if (nums[i] > min) maxDiff = Math.max(maxDiff, nums[i] - min);
-    else min = nums[i];
+  for (let i = 0; i < s.length; i++) {
+    temp += s[i];
+    if ((i + 1) % k === 0) {
+      result.push(temp);
+      temp = "";
+    }
   }
-  return maxDiff;
+  if (temp) {
+    const needed = k - temp.length;
+    for (let i = 0; i < needed; i++) {
+      temp += fill;
+    }
+    console.log(temp);
+    result.push(temp);
+  }
+  console.log(result);
+  return result;
 };
 
-maximumDifference([7, 1, 5, 4]);
-// maximumDifference([1, 5, 2, 10]);
+divideString("abcdefghij", 3, "x");
+divideString("ctoyjrwtngqwt", 8, "n");
