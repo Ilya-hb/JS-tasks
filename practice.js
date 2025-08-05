@@ -1,31 +1,16 @@
-/**
- * @param {string} s
- * @param {number} k
- * @param {character} fill
- * @return {string[]}
- */
-var divideString = function (s, k, fill) {
-  const result = [];
-  let temp = "";
+function charFrequency(str) {
+  const uniqueChars = [...new Set(str)].reduce((obj, val) => {
+    obj[val] = 0;
+    return obj;
+  }, {});
 
-  for (let i = 0; i < s.length; i++) {
-    temp += s[i];
-    if ((i + 1) % k === 0) {
-      result.push(temp);
-      temp = "";
+  for (char of str) {
+    if (char in uniqueChars) {
+      uniqueChars[char] += 1;
     }
   }
-  if (temp) {
-    const needed = k - temp.length;
-    for (let i = 0; i < needed; i++) {
-      temp += fill;
-    }
-    console.log(temp);
-    result.push(temp);
-  }
-  console.log(result);
-  return result;
-};
-
-divideString("abcdefghij", 3, "x");
-divideString("ctoyjrwtngqwt", 8, "n");
+  console.log(uniqueChars);
+}
+// Верни объект, в котором ключи — символы, значения — сколько раз встречаются в строке.
+charFrequency("hello");
+// { h: 1, e: 1, l: 2, o: 1 }
