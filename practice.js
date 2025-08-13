@@ -1,33 +1,9 @@
 /**
- * @param {number[]} nums
- * @param {number} k
- * @return {void} Do not return anything, modify nums in-place instead.
+ * @param {number} n
+ * @return {boolean}
  */
-
-// 1. Reverse Array
-// 2. Find K-index
-// 3. Find k-1
-// 4. Reverse 2 subarrays where k-1 end of 1st subarray, and k start of next subarray
-
-// we mod k, because let's say k=5
-// and array length is 4,
-// then ideally you just need to do 1 rotation instead of 5 rotations.
-
-const revNums = (nums, start, end) => {
-  while (start < end) {
-    [nums[start], nums[end]] = [nums[end], nums[start]];
-    start++;
-    end--;
-  }
+var isPowerOfThree = function (n, i = 1) {
+  if (n <= 0) return false;
+  return Math.pow(i, 3) === n ? true : isPowerOfThree(n, (i += 1));
 };
-
-var rotate = function (nums, k) {
-  k = k % nums.length;
-  nums.reverse();
-
-  revNums(nums, 0, k - 1);
-  revNums(nums, k, nums.length - 1);
-  return nums;
-};
-
-console.log([1, 2, 3, 4, 5, 6, 7], 3);
+console.log(isPowerOfThree(27));
