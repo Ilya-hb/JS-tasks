@@ -1,18 +1,15 @@
 /**
- * @param {string} num
- * @return {string}
+ * @param {number} n
+ * @return {boolean}
  */
-var largestGoodInteger = function (num) {
-  let maxGood = "";
 
-  for (let i = 0; i < num.length - 2; i++) {
-    let substr = num.slice(i, i + 3);
-    if (substr[0] === substr[1] && substr[1] === substr[2]) {
-      if (substr > maxGood) maxGood = substr;
-    }
+// Given an integer n, return true if it is a power of four. Otherwise, return false.
+// An integer n is a power of four, if there exists an integer x such that n == 4x.
+var isPowerOfFour = function (n) {
+  if (n <= 0) return false;
+  while (n % 4 === 0) {
+    n /= 4;
   }
-  return maxGood;
+  return n === 1;
 };
-
-console.log(largestGoodInteger("123"));
-console.log(largestGoodInteger("1221000"));
+console.log(isPowerOfFour(-8));
