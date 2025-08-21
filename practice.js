@@ -1,28 +1,40 @@
 /**
- * @param {string} s
- * @return {boolean}
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
  */
-var isValid = function (s) {
-  const stack = [];
+/**
+ * @param {ListNode} list1
+ * @param {ListNode} list2
+ * @return {ListNode}
+ */
 
-  const map = { ")": "(", "]": "[", "}": "{" };
+function ListNode(val, next) {
+  this.val = val === undefined ? 0 : val;
+  this.next = next === undefined ? null : next;
+}
 
-  for (let i = 0; i < s.length; i++) {
-    if (!(s[i] in map)) stack.push(s[i]); // push the opening bracket
-    else {
-      if (!stack.length || stack[stack.length - 1] !== map[s[i]]) return false;
-      else stack.pop();
+var mergeTwoLists = function (list1, list2) {
+  let dummy = new ListNode();
+  let curr = dummy;
+  console.log(curr);
+
+  while (list1 !== null && list2 !== null) {
+    if (list1.val <= list2.val) {
+      curr.next = list1;
+      list1 = list1.next;
+      curr = curr.next;
+    } else {
+      curr.next = list2;
+      list2 = list2.next;
+      curr = curr.next;
     }
   }
-  return !stack.length;
+  curr.next = list1 !== null ? list1 : list2;
+  return dummy.next;
 };
 
-// console.log(isValid("()[]{}"));
-console.log(isValid("([)]"));
-
-// Hint 1
-// Use a stack of characters.
-// Hint 2
-// When you encounter an opening bracket, push it to the top of the stack.
-// Hint 3
-// When you encounter a closing bracket, check if the top of the stack was the opening for it. If yes, pop it from the stack. Otherwise, return false.
+console.log(mergeTwoLists([1, 2, 4], [1, 3, 4]));
+// console.log(mergeTwoLists([], []));
