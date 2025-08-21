@@ -31,3 +31,22 @@ const array = [1, 2, 3, 4];
 // Fill with 0 from position 2 until position 4
 console.log(array.fill(0, 2, 4));
 // Expected output: Array [1, 2, 0, 0]
+
+// The every() method of Array instances tests whether all elements in the array pass the test implemented by the provided function.
+// It returns a Boolean value.
+const isBelowThreshold = (currentValue) => currentValue < 40;
+const array4 = [1, 30, 39, 29, 10, 13];
+console.log(array4.every(isBelowThreshold));
+// Expected output: true
+
+// The filter() method of Array instances creates a shallow copy of a portion of a given array,
+// filtered down to just the elements from the given array that pass the test implemented by the provided function.
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+const result = words.filter((word) => word.length > 6);
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+
+// The toString() method of Array instances returns a string representing the specified array and its elements.
+const arrayt = [1, 2, "a", "1a"];
+console.log(arrayt.toString());
+// Expected output: "1,2,a,1a"
