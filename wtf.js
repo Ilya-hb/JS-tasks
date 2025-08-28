@@ -24,7 +24,7 @@ function* generate2() {
   console.log("generate-2.2");
 }
 
-console.log("script start");
+console.log("script start"); //1
 
 setTimeout(function () {
   console.log("setTimeout");
