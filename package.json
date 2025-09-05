@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "name": "js-tasks",
+  "version": "1.0.0",
+  "main": "wtf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ilya-hb/JS-tasks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ilya-hb/JS-tasks/issues"
+  },
+  "homepage": "https://github.com/Ilya-hb/JS-tasks#readme",
+  "description": ""
+}
