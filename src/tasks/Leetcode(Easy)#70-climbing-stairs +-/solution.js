@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function climbStairs(n) {
   const cache = { 1: 1, 2: 2 };
   function memo(n) {
@@ -14,4 +12,3 @@ function climbStairs(n) {
 }
 console.log(climbStairs(3));
 console.log(climbStairs(5));
-//# sourceMappingURL=practice.js.map
