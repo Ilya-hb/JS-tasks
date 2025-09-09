@@ -14,4 +14,4 @@ function thirdMax(nums) {
 }
 // console.log(thirdMax([3, 2, 1]));
 console.log(thirdMax([1, 2, 2, 5, 3, 5]));
-//# sourceMappingURL=practice.js.map
+//# sourceMappingURL=solution.js.map
